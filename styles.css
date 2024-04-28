@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*
+    Challenge:
+    Find a web safe font you like, and add it 
+    to your card.
+    */
+    margin: 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #132a13;
+    z-index: -1;
+    transition: background 1s;
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(0);
+    margin: 50px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px #000000;
+    transition: color 1s, opacity 1s;
+    z-index: 100;
+}
+
+.title-newbie {
+    color: #fca311;
+    opacity: 100;
+}
+
+.title-pro {
+    color: #ba181b;
+    opacity: 0;
+}
+
+.gif-img {
+    position: absolute;
+    top: 150px;
+    left: -400px;
+    transform: translateX(-50%);
+    box-sizing: content-box;
+    margin: 0 auto;
+    width: 300px;
+    height: 200px;
+    background-image: url(/images/justdoit.gif);
+    background-size: cover;
+    background-position: center;  
+    box-shadow: 3px 3px 5px #000000;
+    border: 5px solid #fca311;
+        border-top-left-radius: 50px;   
+    border-bottom-right-radius: 50px;
+    transition: background-image 1s, border 1s;
+    animation: move 3s linear infinite;
+}
+
+.card {
+    /*
+    Challenge:
+    Find a color palette you like on Coolors.co
+    and use it in your business card.
+     */
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    width: 650px;
+    text-align: center;
+    gap: 50px;
+    text-shadow: 3px 3px 3px #000000;
+    box-shadow: 3px 3px 5px #000000;
+    border-top-left-radius: 50px;   
+    border-bottom-right-radius: 50px;
+    cursor: crosshair;  
+    transition: opacity 1s; 
+    animation: silde 0.5s linear forwards;  
+}
+
+.card-newbie {
+    background: #14213d;
+    border: 5px solid #fca311;
+    opacity: 100;
+    z-index: 1;
+}
+
+.card-pro {
+    background: #161a1d;
+    border: 5px solid #ba181b;
+    opacity: 0;
+}
+
+.card-img {
+    width: 250px;
+    box-shadow: 3px 3px 5px #000000;
+    border-top-left-radius: 50px;   
+    border-bottom-right-radius: 50px;  
+}
+
+.img-newbie {
+    border: 5px solid #fca311;
+}
+
+.img-pro {
+    border: 5px solid #ba181b;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    text-transform: uppercase;
+}
+
+.card-text h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.text-newbie h2 {
+    color: #fca311;
+}
+
+.text-newbie h2 {
+    color: #fca311;
+}
+
+.text-pro h2 {
+    color: #ba181b;
+}
+
+.card-text p {
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.text-newbie p {
+    color: #e5e5e5;
+}
+
+.text-pro p {
+    color: #d3d3d3;
+}
+
+.card-newbie:hover {
+    opacity: 0;
+}
+
+.card-newbie:hover ~ .card-pro {
+    opacity: 100;
+}
+
+.card-newbie:hover ~ .title-newbie {
+    opacity: 0;
+}
+
+.card-newbie:hover ~ .title-pro {
+    opacity: 100;
+}
+
+.card-newbie:hover ~ .gif-img {
+    background-image: url(/images/power.gif);
+    border: 5px solid #ba181b;
+}
+
+.card-newbie:hover ~ .background {
+    background: #0b090a;
+}
+
+@keyframes move {
+    from {
+        left: -300px;
+    }
+    
+    to {
+        left: calc(100vw + 300px);
+    }
+}
+
+@keyframes silde {
+    from {
+        top: -600px;
+         transform: translateX(-50%) rotate(-180deg);
+    }
+    
+    to {
+        top: 450px;
+        transform: translateX(-50%) rotate(0);
+    }
+}
+
+
+
+/*
+Stretch goals:
+Find other ways you can personalize 
+the design of your business card, e.g.:
+- change the border(s)
+- add border radius
+- shuffle the layout
+- shadows        🤯
+- hover effects  🤯🤯
+- animations     🤯🤯🤯
+*/
+
+/*
+Final challenge:
+Download the code to your local computer and place it
+in a folder called "business-card"
+*/
+
+
+
